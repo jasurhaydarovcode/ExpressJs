@@ -2,15 +2,20 @@ const express = require('express');
 
 const app = express();
 
-
-app.use((req, res, next) => {
-    console.log('Middleware 1 is running');
-    next() // next is used to move to the next middleware, keyingi middleware ni o'qib ketishi uchun
+// All Route Request Log
+app.use('/', (req, res, next) => {
+    console.log('This forever run');
+    next(); 
 })
 
-app.use((req, res, next) => {
-    console.log('Middleware 2');
-    res.send(`<h1><center>Middleware 2 view</center></h1>`);
+// Users Page Request 
+app.use('/users', (req, res, next) => {
+    res.send(`<p>Users List</p>`);
+})
+
+// Home Page Request 
+app.use('/', (req, res, next) => {
+    res.send(`<h1>Home Page</h1>`);
 })
 
 const PORT = process.env.PORT || 3000;
