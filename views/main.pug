@@ -1,18 +1,18 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Add users
-        link(rel="stylesheet", href="/css/main.css")
-    body 
-        header.header
-            nav.header-nav
-                ul.header-item-list     
-                    li.header-item 
-                        a(href="/") Bosh Sahifa 
-                    li.header-item 
-                        a(href="/users/add-users") Add users 
-        main 
-            h1 Users list 
-            p All users lists...
+extends layout/main-layout.pug
+
+block styles
+    link(rel="stylesheet", href="/css/main.css")
+
+block content
+    main 
+        h1 Users list 
+        if users.length > 0
+            each user in users
+                div.card
+                    img(src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;")
+                    div.container
+                        h4
+                            b #{user.username}
+                        p Age: #{user.age}
+        else 
+            p There is no users
