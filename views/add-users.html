@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
+    <link rel="stylesheet" href="/css/add-users.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Bosh Sahifa</a></li>
-                <li><a href="/add-users">Add Users</a></li>
+    <header class="header">
+        <nav class="header-nav">
+            <ul class="header-item-list">
+                <li class="header-item"><a href="/">Bosh Sahifa</a></li>
+                <li class="header-item"><a href="/users/add-users">Add Users</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Add User</h1>
-        <form action="/users" method="POST">
-            <input type="text" name="username">
-            <input type="number" name="age">
+        <form class="user-form" action="/users" method="POST">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+            </div>
+            <div class="form-control">
+                <label for="age">Age</label>
+                <input type="number" name="age">
+            </div>
             <button type="submit">Send</button>
         </form>
     </main>
