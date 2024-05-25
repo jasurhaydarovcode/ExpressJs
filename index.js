@@ -11,6 +11,29 @@ const mainRouts = require('./routes/main');
 app.use('/users', userRouts);
 app.use(mainRouts);
 
+app.use((req, res, next) => {
+    res.status(404).send(`
+        <head>
+            <title>404 Page Not Found</title>
+            <style>
+                body {
+                    background-color: #000;
+                    color: #fff;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90vh;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>404 Page not found</h1>
+        </body>
+    `)
+})
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
