@@ -21,7 +21,6 @@ body {
 }
 .header-item {
     margin: 0;
-    padding: 0;
     padding: 0 1rem;
 }
 .header-item a{
@@ -41,6 +40,11 @@ body {
     display: block;
     width: 100%;
 }
+.form-control input {
+    border: 1px solid blue;
+    font: inherit;
+    border-radius: 3px;
+}
 button {
     border: 1px solid green;
     color: green;
@@ -48,9 +52,4 @@ button {
     border-radius: 3px;
     cursor: pointer;
     font: inherit;
-}
-.form-control input {
-    border: 1px solid blue;
-    font: inherit;
-    border-radius: 3px;
 }

@@ -48,3 +48,29 @@ body {
 img {
     border-radius: 5px 5px 0 0;
 }
+.user-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+.form-control {
+    margin: 1.5rem 0;
+}
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+.form-control input {
+    border: 1px solid blue;
+    font: inherit;
+    border-radius: 3px;
+}
+button {
+    border: 1px solid green;
+    color: green;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font: inherit;
+}
