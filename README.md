@@ -27,3 +27,8 @@ app.listen(3000)
 ```bash
 npm install --save pug ejs express-handlebars
 ```
+
+## nodemon 
+```bash
+npm run dev
+```
