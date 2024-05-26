@@ -22,3 +22,8 @@ app.get('/', function (req, res) {
 
 app.listen(3000)
 ```
+
+### all technology `pug, handlebars, ejs`
+```bash
+npm install --save pug ejs express-handlebars
+```
