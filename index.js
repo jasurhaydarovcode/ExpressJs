@@ -1,13 +1,11 @@
 const express = require('express');
 const path = require('path');
-// const { engine } = require('express-handlebars');
+const { engine } = require('express-handlebars');
 
 const app = express();
 
-// app.set('view engine', 'pug');
-// app.engine('.hbs', engine({extname: '.hbs'}));
-// app.set('view engine', '.hbs');
-app.set('view engine', 'ejs');
+app.engine('.hbs', engine({extname: '.hbs'}));
+app.set('view engine', '.hbs');
 app.set('views', 'views');
 
 app.use(express.json());
