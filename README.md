@@ -24,6 +24,11 @@
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![UUID](https://img.shields.io/badge/UUID-ffffff?style=for-the-badge&logo=uuid&logoColor=black)
 
+### data base
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+
 
 ## Run
 
