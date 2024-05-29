@@ -16,9 +16,8 @@ const getAddUsersPage = (req, res) => {
 // Description  add new user
 const addNewUser = async (req, res) => {
     try {
-        await pool.query(`
-            INSERT INTO user_info (username, age) VALUES ($1, $2)
-        `, [req.body.username, req.body.age])
+        const newUser = new User(req.body.username, req.body.age)
+        await newUser.save()
         res.redirect('/')
     } catch (err) {
         console.log(err);
@@ -45,9 +44,7 @@ const updateUserPage = async (req, res) => {
 // Description  edit user
 const updateUser = async (req, res) => {
     try {
-        await pool.query('UPDATE user_info SET username = $1, age = $2 WHERE id = $3', 
-            [req.body.username, req.body.age,  req.params.id]
-        )
+        await User.findByIdAndDelete(req.params.id, req.body.username, req.body.age)
         res.redirect('/')
     } catch (err) {
         console.log(err);
@@ -59,9 +56,7 @@ const updateUser = async (req, res) => {
 // Description  delete user
 const deleteUser = async (req, res) => {
     try {
-        await pool.query('DELETE FROM user_info WHERE id = $1', 
-            [req.params.id]
-        )
+        await User.findByIdAndRemove(req.params.id)
         res.redirect('/')
     } catch (err) {
         console.log(err);

@@ -6,10 +6,10 @@ const pool = require('../config/db')
 // Description  Get main page
 const getMainPage = async (req, res) => {
     try {
-        const users = await pool.query('SELECT * FROM user_info')
+        const users = await User.findAll()
         res.render('main', {
             title:'Users',
-            users: users.rows
+            users: users
         })
     }catch (err) {
         console.log(err);
@@ -21,10 +21,10 @@ const getMainPage = async (req, res) => {
 // Description  Get user page by uid
 const getUserPageByUid = async (req, res) => {
     try {
-        const user = await pool.query('SELECT * FROM user_info WHERE id = $1', [req.params.id])
+        const user = await User.findById(req.params.id)
         res.render('user-page', {
-            title: user.rows[0].username,
-            user: user.rows[0]
+            title: user.username,
+            user: user
         })
     } catch (err) {
         console.log(err);
