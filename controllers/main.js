@@ -7,25 +7,28 @@ const pool = require('../config/db')
 const getMainPage = async (req, res) => {
     try {
         const users = await pool.query('SELECT * FROM user_info')
-        console.log(users.rows);
         res.render('main', {
             title:'Users',
             users: users.rows
         })
-    }catch (error) {
-        console.log(error);
+    }catch (err) {
+        console.log(err);
     }
 }
 
-//Route         /:uid
+//Route         /:id
 //Method        GET
 // Description  Get user page by uid
-const getUserPageByUid = (req, res) => {
-    const user = User.findByUid(req.params.uid)
-    res.render('user-page', {
-        title: user.username,
-        user
-    })
+const getUserPageByUid = async (req, res) => {
+    try {
+        const user = await pool.query('SELECT * FROM user_info WHERE id = $1', [req.params.id])
+        res.render('user-page', {
+            title: user.rows[0].username,
+            user: user.rows[0]
+        })
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 module.exports = {
