@@ -23,8 +23,8 @@ app.use((req, res, next) => {
 });
 
 
-const PORT = process.env.PORT || 3300;
+const PORT = process.env.PORT || 450;
 
 app.listen(PORT, () => {
-    console.log('https://localhost:3300 \nServer is running on port: ' + PORT);
+    console.log('http://localhost:450 \nServer is running on port: ' + PORT);
 })
