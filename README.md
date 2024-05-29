@@ -1,6 +1,12 @@
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
-# <img align='center' src="https://skillicons.dev/icons?i=express" alt="dotenv" title="dotenv" width='60'> Express Js
+<div align=center>
+
+# <img align='center' src="https://skillicons.dev/icons?i=express" alt="dotenv" title="dotenv" width='60'> Express JS
+
+### Powered by <img align=center src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
+
+</div>
 
 - Type: `Framework`
 - ExpressJs makes working with NodeJs easy
@@ -12,14 +18,12 @@
 | Community          | Large                     | Wide-ranging             |
 | Easy Scalability   | Straightforward           | 
 
-### framework & library `nodemon, express-handlebars`
-```bash
-npm install --save-dev nodemon
-```
+### framework & library 
 
-```bash
-npm install --save express-handlebars
-```
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![UUID](https://img.shields.io/badge/UUID-ffffff?style=for-the-badge&logo=uuid&logoColor=black)
+
 
 ## nodemon run
 ```bash
