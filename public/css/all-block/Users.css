@@ -47,3 +47,25 @@ img {
         transition: all 0.3s ease-in-out;
     }
 }
+
+.btn-e-r {
+    display: flex;
+    margin-top: 10px;
+    form {
+        margin-left: 10px;
+        button {
+            background: #E90A0A;
+            &:focus {
+                outline: none;
+                border: 0.2px solid #E90A0A;
+            }
+            &:active {
+                box-shadow: 0 0 10px #E90A0A;
+            }
+            &:hover {
+                box-shadow: 0 0 20px #E90A0A;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}

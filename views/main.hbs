@@ -8,7 +8,15 @@
                 <div class="container">
                     <h4><b>Name: {{username}}</b></h4>
                     <p>Age: {{ age }}</p>
-                    <a href="/users/{{ id }}" class="btn">More info...</a>
+                    <div>
+                        <a href="/users/{{ id }}" class="btn">More info...</a>
+                    </div>
+                    <div class="btn-e-r">
+                        <a href="/users/edit/{{ id }}" class="btn">Edit Info</a>
+                        <form action="/users/delete/{{ id }}" method="POST">
+                            <button type="submit" class="btn">Delete</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         {{/each}}
