@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+    color: white;
+    font-family: Source Code Pro, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+}
+
+/* WEBKIT SCROLLBAR */
+body::-webkit-scrollbar {
+    width: 8px
+}
+
+body::-webkit-scrollbar-track {
+    background: #232E33;
+    border-radius: 3px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #312a7c;
+    border-radius: 3px;    
+}
+/* webkit scrollbar END */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    user-select: none;
+}
+
+#Page-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}

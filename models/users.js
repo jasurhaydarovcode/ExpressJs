@@ -17,8 +17,13 @@ module.exports = class User {
             users = JSON.parse(data);
             users.push({ username: this.username, age: this.age });
 
-            fs.writeFile(pathToFile, JSON.stringify(users), (err) => {
-                if(err) throw err;
+            // fs.writeFile(pathToFile, JSON.stringify(users), (err) => {
+            //     if(err) throw err;
+            // });
+
+            // Sizning kodingizdagi JSON ma'lumotlarini chiroyli qilib qatorlarga ajratish uchun JSON.stringify funksiyasiga indent parametrini qo'shishingiz kerak. Bu parametr JSON ma'lumotlarini chiroyli qilib chiqarishga yordam beradi.
+            fs.writeFile(pathToFile, JSON.stringify(users, null, 4), (err) => {
+                if (err) throw err;
             });
         })
     }

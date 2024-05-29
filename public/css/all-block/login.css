@@ -1,0 +1,48 @@
+.user-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 10%;
+}
+.form-control {
+    margin: 1.5rem 0;
+}
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+.form-control input {
+    font: inherit;
+
+    padding: 9px 20px;
+    border-radius: 5px;
+    border: 1px solid #0ae5e9;
+    font-size: 16px;
+    &::placeholder {
+        color: #0ae5e9;
+    }
+}
+
+input, button {
+    &:focus {
+        outline: none;
+        border: 0.2px solid #0ae5e9;
+    }
+    &:active {
+        box-shadow: 0 0 10px #0ae5e9;
+    }
+    &:hover {
+        box-shadow: 0 0 10px #0ae5e9;
+        transition: all 0.3s ease-in-out;
+    }
+}
+button {
+    background-color: #0ae5e9;
+    font-weight: bold;
+    padding: 11px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

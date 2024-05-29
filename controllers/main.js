@@ -6,7 +6,7 @@ const User = require('../models/users')
 const getMainPage = (req, res) => {
     const users = User.findAll()
     res.render('main', {
-        title:'User List',
+        title:'Users',
         users
     })
 }

@@ -1,8 +1,9 @@
 <main>
+    <div class="container-login">
         <form class="user-form" action="/users/users" method="POST">
             <div class="form-control">
                 <label for="username">username</label>
-                <input type="text" name="username">
+                <input type="text" name="username" required>
             </div>
             <div class="form-control">
                 <label for="age">Age</label>
@@ -10,4 +11,5 @@
             </div>
             <button type="submit">Send</button>
         </form>
-    </main>
+    </div>
+</main>

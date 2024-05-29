@@ -1,16 +1,18 @@
 <main>
-    <h1>Users List</h1>
-    {{#if users}}
-    {{#each users}}
-        <div class="card">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;">
-            <div class="container">
-                <h4><b>Name: {{username}}</b></h4>
-                <p>Age: {{ age }}</p>
+    <h1 class="logo"><a href="/">Users List</a></h1>
+    <div class="container-card">
+        {{#if users}}
+        {{#each users}}
+            <div class="card">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width: 100%;">
+                <div class="container">
+                    <h4><b>Name: {{username}}</b></h4>
+                    <p>Age: {{ age }}</p>
+                </div>
             </div>
-        </div>
-    {{/each}}
-    {{else}}
-        <p>All User List...</p>
-    {{/if}}
+        {{/each}}
+        {{else}}
+            <p class="logo">All User List...</p>
+        {{/if}}
+    </div>
 </main>
