@@ -1,4 +1,4 @@
-const users = []
+const User = require('../models/users');
 
 //Route         /add-users
 //Method        GET
@@ -13,12 +13,12 @@ const getAddUsersPage = (req, res) => {
 //Method        POST
 // Description  add new user
 const addNewUser = (req, res) => {
-    users.push({ username: req.body.username, age: req.body.age });
+    const users = new User(req.body.username, req.body.age)
+    users.save()
     res.redirect('/')
 }
 
 module.exports = {
     getAddUsersPage,
     addNewUser,
-    users
 }
