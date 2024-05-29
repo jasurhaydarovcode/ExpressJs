@@ -12,6 +12,21 @@
 | Community          | Large                     | Wide-ranging             |
 | Easy Scalability   | Straightforward           | 
 
+### framework & library `nodemon, express-handlebars`
+```bash
+npm install --save-dev nodemon
+```
+
+```bash
+npm install --save express-handlebars
+```
+
+## nodemon run
+```bash
+npm run dev
+```
+
+### example
 ```js
 const express = require('express')
 const app = express()
@@ -21,14 +36,4 @@ app.get('/', function (req, res) {
 })
 
 app.listen(3000)
-```
-
-### all technology `pug, handlebars, ejs`
-```bash
-npm install --save pug ejs express-handlebars
-```
-
-## nodemon 
-```bash
-npm run dev
 ```
