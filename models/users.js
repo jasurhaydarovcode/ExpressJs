@@ -3,11 +3,11 @@ const path = require('path');
 
 const pathToFile = path.join(__dirname, '../data/users.json')
 
-
 module.exports = class User {
-    constructor(username, age) {
+    constructor(uid, username, age) {
         this.username = username;
         this.age = age;
+        this.uid = uid;
     }
 
     save(){
@@ -15,7 +15,7 @@ module.exports = class User {
         fs.readFile(pathToFile, 'utf8', (err, data) => {
             if(err) throw err;
             users = JSON.parse(data);
-            users.push({ username: this.username, age: this.age });
+            users.push({ uid: this.uid, username: this.username, age: this.age });
 
             // fs.writeFile(pathToFile, JSON.stringify(users), (err) => {
             //     if(err) throw err;
@@ -31,5 +31,11 @@ module.exports = class User {
     static findAll(){
         const data = () => fs.readFileSync(pathToFile, 'utf8')
         return JSON.parse(data())
+    }
+    static findByUid(uid){
+        const data = () => fs.readFileSync(pathToFile, 'utf8')
+        const users = JSON.parse(data())
+        const user = users.find(el => el.uid === uid)
+        return user
     }
 }

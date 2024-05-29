@@ -10,6 +10,7 @@
     transition: 0.3;
     width: 250px;
     border-radius: 5px;
+    padding-bottom: 15px;
 }
 
 .card:hover {
@@ -22,4 +23,27 @@
 
 img {
     border-radius: 5px 5px 0 0;
+}
+
+.btn {
+    background-color: #0ae5e9;
+    font-weight: bold;
+    padding: 5px 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        border: 0.2px solid #0ae5e9;
+    }
+    &:active {
+        box-shadow: 0 0 10px #0ae5e9;
+    }
+    &:hover {
+        box-shadow: 0 0 10px #0ae5e9;
+        transition: all 0.3s ease-in-out;
+    }
 }

@@ -1,4 +1,5 @@
 const User = require('../models/users');
+const uuid = require('uuid');
 
 //Route         /add-users
 //Method        GET
@@ -13,7 +14,8 @@ const getAddUsersPage = (req, res) => {
 //Method        POST
 // Description  add new user
 const addNewUser = (req, res) => {
-    const users = new User(req.body.username, req.body.age)
+    const uid = uuid.v4()
+    const users = new User(uid, req.body.username, req.body.age)
     users.save()
     res.redirect('/')
 }
