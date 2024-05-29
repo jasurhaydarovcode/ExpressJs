@@ -1,4 +1,5 @@
 const User = require('../models/users');
+const pool = require('../config/db')
 const uuid = require('uuid');
 
 //Route         /add-users
@@ -13,11 +14,15 @@ const getAddUsersPage = (req, res) => {
 //Route         /users
 //Method        POST
 // Description  add new user
-const addNewUser = (req, res) => {
-    const uid = uuid.v4()
-    const users = new User(uid, req.body.username, req.body.age)
-    users.save()
-    res.redirect('/')
+const addNewUser = async (req, res) => {
+    try {
+        const newUser = await pool.query(`
+            INSERT INTO user_info (username, age) VALUES ($1, $2)
+        `, [req.body.username, req.body.age])
+        res.redirect('/')
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 module.exports = {
