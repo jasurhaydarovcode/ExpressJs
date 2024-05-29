@@ -6,6 +6,9 @@
                 <div class="container">
                     <h4><b>Name: {{ user.username }}</b></h4>
                     <p>Age: {{ user.age }}</p>
+                    <form action="/users/delete/{{ user.id }}" method="post">
+                        <button type="submit" class="btn-del">Delete</button>
+                    </form>
                 </div>
             </div>
         {{else}}

@@ -25,6 +25,13 @@
     margin: 0;
     padding: 0;
     padding: 0 1rem;
+    a {
+        &:hover {
+
+            color: rgb(57, 57, 174);
+            transition: 0.3s ease-in-out;
+        }
+    }
 }
 .header-item a{
     text-decoration: none;
