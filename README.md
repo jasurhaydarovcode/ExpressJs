@@ -25,7 +25,16 @@
 ![UUID](https://img.shields.io/badge/UUID-ffffff?style=for-the-badge&logo=uuid&logoColor=black)
 
 
-## nodemon run
+## Run
+
+```bash
+npm i
+```
+
 ```bash
 npm run dev
+```
+
+```bash
+http://localhost:450
 ```
